@@ -5,65 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HanLuxe | Lip Collection</title>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NSPG9F1V11"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-NSPG9F1V11');
   </script>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #fff9f8;
     }
+
     .navbar {
       background-color: #fff;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
+
     .navbar-brand {
       font-weight: 600;
       color: #d97c7c;
       font-size: 1.5rem;
     }
+
+    /* HERO */
     .hero {
       background: linear-gradient(to right, #fff4f3, #ffecec);
       padding: 100px 0;
-      text-align: center;
     }
+
     .hero h1 {
       color: #b34e4e;
       font-weight: 700;
     }
+
     .hero p {
       color: #7a5555;
       font-size: 1.1rem;
       margin-bottom: 20px;
     }
+
+    .hero-img {
+      max-width: 420px;
+      border-radius: 32px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease;
+    }
+
+    .hero-img:hover {
+      transform: translateY(-8px);
+    }
+
     .btn-primary {
       background-color: #d97c7c;
       border: none;
     }
+
     .btn-primary:hover {
       background-color: #b34e4e;
     }
+
+    /* PRODUK */
     .product-card {
       border: none;
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       transition: transform 0.3s;
     }
+
     .product-card:hover {
       transform: scale(1.03);
     }
+
     .product-card img {
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
     }
+
     footer {
       background-color: #fff;
       text-align: center;
@@ -71,109 +94,135 @@
       color: #a17b7b;
       font-size: 0.9rem;
     }
+
+    @media (max-width: 768px) {
+      .hero {
+        text-align: center;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">HanLuxe</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link text-secondary" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-secondary" href="#produk">Produk</a></li>
-          <li class="nav-item"><a class="nav-link text-secondary" href="#">Tentang</a></li>
-          <li class="nav-item"><a class="nav-link text-secondary" href="cart.html">Keranjang</a></li>
-        </ul>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">HanLuxe</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link text-secondary" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-secondary" href="#produk">Produk</a></li>
+        <li class="nav-item"><a class="nav-link text-secondary" href="#">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link text-secondary" href="cart.html">Keranjang</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Text -->
+      <div class="col-md-6">
+        <h1>Temukan Pesona Bibir Sempurna</h1>
+        <p>
+          Koleksi lip product HanLuxe hadir dengan warna lembut dan formula lembap
+          yang bikin kamu tampil percaya diri sepanjang hari.
+        </p>
+        <a href="#produk" class="btn btn-primary px-4 py-2">Belanja Sekarang</a>
       </div>
-    </div>
-  </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <h1>Temukan Pesona Bibir Sempurna</h1>
-      <p>Koleksi lip product HanLuxe hadir dengan warna lembut dan formula lembap yang bikin kamu tampil percaya diri sepanjang hari.</p>
-      <a href="#produk" class="btn btn-primary px-4 py-2">Belanja Sekarang</a>
-    </div>
-  </section>
-
-  <!-- Produk -->
-  <section class="py-5" id="produk">
-    <div class="container">
-      <h2 class="text-center mb-4" style="color:#b34e4e; font-weight:600;">Koleksi Terbaru</h2>
-      <div class="row g-4">
-        
-        <!-- Produk 1 -->
-        <div class="col-md-4">
-          <div class="card product-card">
-            <img src="https://img.myshopline.com/image/store/2004129914/1674805255704/3145891719000.jpg?w=2000&h=2000" class="card-img-top" alt="Lip Balm">
-            <div class="card-body text-center">
-              <h5 class="card-title">HanLuxe Rouge Coco Baume</h5>
-              <p class="text-muted mb-2">Rp790.000</p>
-              <button class="btn btn-primary btn-sm add-cart">Tambah ke Keranjang</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Produk 2 -->
-        <div class="col-md-4">
-          <div class="card product-card">
-            <img src="https://img.myshopline.com/image/store/2004129914/1674805255704/3145891751727.jpg?w=2000&h=2000" class="card-img-top" alt="Lip Liquid">
-            <div class="card-body text-center">
-              <h5 class="card-title">HanLuxe Ultra Wear Liquid Lip</h5>
-              <p class="text-muted mb-2">Rp880.000</p>
-              <button class="btn btn-primary btn-sm add-cart">Tambah ke Keranjang</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Produk 3 -->
-        <div class="col-md-4">
-          <div class="card product-card">
-            <img src="https://img.myshopline.com/image/skuImg/1674805255704/20f0708be6ba4f52a86a9e6315078e3c.jpeg?w=2000&h=2000" class="card-img-top" alt="Lip Velvet">
-            <div class="card-body text-center">
-              <h5 class="card-title">HanLuxe Rouge Alure Ink</h5>
-              <p class="text-muted mb-2">Rp800.000</p>
-              <button class="btn btn-primary btn-sm add-cart">Tambah ke Keranjang</button>
-            </div>
-          </div>
-        </div>
-
+      <!-- Image -->
+      <div class="col-md-6 text-center mt-4 mt-md-0">
+        <img
+          src="https://img.myshopline.com/image/store/2004129914/1674805255704/3145891719000.jpg?w=2000"
+          class="img-fluid hero-img"
+          alt="HanLuxe Lip Product"
+        >
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 HanLuxe. All Rights Reserved.</p>
-  </footer>
+<!-- PRODUK -->
+<section class="py-5" id="produk">
+  <div class="container">
+    <h2 class="text-center mb-4" style="color:#b34e4e; font-weight:600;">Koleksi Terbaru</h2>
+    <div class="row g-4">
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Tambah ke keranjang
-    const buttons = document.querySelectorAll('.add-cart');
+      <!-- Produk 1 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://img.myshopline.com/image/store/2004129914/1674805255704/3145891719000.jpg?w=2000" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">HanLuxe Rouge Coco Baume</h5>
+            <p class="text-muted mb-2">Rp790.000</p>
+            <button class="btn btn-primary btn-sm add-cart">Tambah ke Keranjang</button>
+          </div>
+        </div>
+      </div>
 
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const card = btn.closest('.card');
-        const title = card.querySelector('.card-title').textContent;
-        const price = card.querySelector('.text-muted').textContent;
-        const img = card.querySelector('img').src;
+      <!-- Produk 2 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://img.myshopline.com/image/store/2004129914/1674805255704/3145891751727.jpg?w=2000" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">HanLuxe Ultra Wear Liquid Lip</h5>
+            <p class="text-muted mb-2">Rp880.000</p>
+            <button class="btn btn-primary btn-sm add-cart">Tambah ke Keranjang</button>
+          </div>
+        </div>
+      </div>
 
-        const product = { title, price, img };
+      <!-- Produk 3 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://img.myshopline.com/image/skuImg/1674805255704/20f0708be6ba4f52a86a9e6315078e3c.jpeg?w=2000" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">HanLuxe Rouge Alure Ink</h5>
+            <p class="text-muted mb-2">Rp800.000</p>
+            <button class="btn btn-primary btn-sm add-cart">Tambah ke Keranjang</button>
+          </div>
+        </div>
+      </div>
 
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        cart.push(product);
-        localStorage.setItem('cart', JSON.stringify(cart));
+    </div>
+  </div>
+</section>
 
-        alert(`${title} berhasil ditambahkan ke keranjang!`);
-      });
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 HanLuxe. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const buttons = document.querySelectorAll('.add-cart');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.card');
+      const title = card.querySelector('.card-title').textContent;
+      const price = card.querySelector('.text-muted').textContent;
+      const img = card.querySelector('img').src;
+
+      const product = { title, price, img };
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push(product);
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      alert(`${title} berhasil ditambahkan ke keranjang`);
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
